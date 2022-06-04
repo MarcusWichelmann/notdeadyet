@@ -1,0 +1,14 @@
+listen: ':8080'
+apps:
+  - name: Test App
+    token: djms90x1hqflyggx
+    timeout: 1h
+    repeat_interval: 1h
+    notify:
+      - Super Administrator
+receivers:
+  pushover:
+    - name: Super Administrator
+      user_key: ...
+      token: ...
+      priority: 0

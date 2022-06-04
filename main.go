@@ -142,7 +142,7 @@ func initWatchers() {
 }
 
 func handleIndex(c *gin.Context) {
-	c.String(http.StatusOK, "Not Dead Yet? - The dead man switch monitoring daemon.")
+	c.String(http.StatusOK, "Not Dead Yet? - The dead man's switch monitoring daemon.")
 }
 
 func handleLiveSign(c *gin.Context) {

@@ -132,7 +132,7 @@ func initWatchers() {
 		}
 
 		// Create watcher.
-		w, err := watching.NewWatcher(&ac, filteredReceivers)
+		w, err := watching.NewWatcher(ac, filteredReceivers)
 		if err != nil {
 			log.WithField("app", ac.Name).WithError(err).Fatal("Cannot create app watcher.")
 		}

@@ -10,7 +10,7 @@ import (
 )
 
 type Watcher struct {
-	App       *config.AppConfig
+	App       config.AppConfig
 	Receivers []notify.Receiver
 
 	timeout        time.Duration
@@ -26,7 +26,7 @@ type Watcher struct {
 	logger *log.Entry
 }
 
-func NewWatcher(app *config.AppConfig, receivers []notify.Receiver) (*Watcher, error) {
+func NewWatcher(app config.AppConfig, receivers []notify.Receiver) (*Watcher, error) {
 	// Parse durations.
 	timeout, err := time.ParseDuration(app.Timeout)
 	if err != nil {
